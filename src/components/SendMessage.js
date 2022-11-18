@@ -33,10 +33,11 @@ const textFieldStyle = {
 };
 
 const SendMessages = () => {
-  const CHARACTER_LIMIT = 100;
+  const CHARACTER_LIMIT = 200;
 
   const [numberEmptyError, setNumberEmptyError] = useState(false);
   const [messageEmptyError, setMessageEmptyError] = useState(false);
+  const [nameEmptyError, setNameEmptyError] = useState(false);
 
   const [formData, setFormData] = useState({
     mobileNumber: "",
@@ -112,7 +113,7 @@ const SendMessages = () => {
             error={null}
             label='Your Name'
             placeholder='Your name in full'
-            name='name'
+            name='fullname'
             value={fullname}
             onChange={onChange}
             size='small'
@@ -125,7 +126,7 @@ const SendMessages = () => {
             InputLabelProps={{
               style: textFieldInputLabelStyle,
             }}
-            // required
+            required
           />
         </div>
         <div className='message app' style={{ marginTop: "1.5em" }}>
