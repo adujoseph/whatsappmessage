@@ -64,7 +64,7 @@ const SendMessages = () => {
       setTimeout(() => setMessageEmptyError(false), 3000);
     } else {
       let composed = `My name is ${fullname}, \n My prayer request: ${message}. \n phone: ${mobileNumber} `
-        let url = `https://web.whatsapp.com/send?phone=${+2348062351171}`;
+        let url = `https://api.whatsapp.com/send?phone=${+2348062351171}`;
         url += `&text=${encodeURI(composed)}&app_absent=0`;
         window.open(url);
     }
